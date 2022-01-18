@@ -41,11 +41,8 @@ public class MainActivity extends AppCompatActivity {
                     TextView winnerTextView = (TextView) findViewById(R.id.winnerTextView);
                     if (activePlayer == 1) {
                         winner = "Yellow";
-                        winnerTextView.setTextColor(Color.YELLOW);
                     } else {
                         winner = "Red";
-                        winnerTextView.setTextColor(Color.RED);
-                        winnerTextView.setTextColor(Color.GREEN);
                     }
                     gameActive = false;
 
@@ -53,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Button playAgainButton = (Button) findViewById(R.id.playAgain);
                     playAgainButton.setVisibility(View.VISIBLE);
-
-
+                    winnerTextView.setVisibility(View.VISIBLE);
 
                 }
             }
@@ -99,13 +95,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-////        GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout);
-////        for(int i=0; i<gridLayout.getChildCount(); i++) {
-////
-////            ImageView counter = (ImageView) gridLayout.getChildAt(i);
-////
-////            counter.setImageDrawable(null);
-//
-//        }
+
     }
 }
